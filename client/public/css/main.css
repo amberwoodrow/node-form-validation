@@ -1,0 +1,9 @@
+.form, .home-content {
+  margin: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.home-content {
+  text-align: center;
+}
