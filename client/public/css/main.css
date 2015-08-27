@@ -7,3 +7,15 @@
 .home-content {
   text-align: center;
 }
+
+ul {
+  margin: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.alert {
+  margin: 20px;
+}

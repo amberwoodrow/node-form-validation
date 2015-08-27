@@ -6,21 +6,31 @@
 {% block content %}
 
   <div class="container">
-    <h2><a href="/">Home</a></h2>
     <div class="form">
       <h1>Add a person</h1>
       <form method="post" action="/people" id="add-person-form">
         <div class="form-group">
           <label for="personName">Give the person a name</label>
-          <input type="name" class="form-control" id="person-name" placeholder="Billy John" name="person-name" required>
+          <input type="name" class="form-control" id="person-name" placeholder="Billy John" name="person-name">
         </div>
         <div class="form-group">
           <label for="personHobby">Give the person a hobby</label>
-          <input type="hobby" class="form-control" id="person-hobby" placeholder="Kite flying" name="person-hobby" required>
+          <input type="hobby" class="form-control" id="person-hobby" placeholder="Kite flying" name="person-hobby">
         </div>
         <button type="submit" class="btn btn-default">Create Person</button>
       </form>
     </div>
+    {% if nameError %}
+    <div class="alert alert-danger" role="alert">
+      {{ nameError }}
+    </div>
+    {% endif %}
+
+    {% if idError %}
+    <div class="alert alert-danger" role="alert">
+      {{ idError }}
+    </div>
+    {% endif %}
   </div>
 
 {% endblock %}

@@ -6,7 +6,11 @@
 {% block content %}
 
 <div class="container">
-  <h2><a href="/">Home</a></h2>
+  {% if success %}  
+    <div class="alert alert-success" role="alert">
+      {{ success }}
+    </div> 
+  {% endif %}
   <table class="table table-striped" id="people">
     <h2>People</h2>
     <thead>

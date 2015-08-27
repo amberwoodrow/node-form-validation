@@ -5,8 +5,16 @@
 
 {% block content %}
 
-<div class="container">    
-  <h2><a href="/">Home {{assjj}}</a></h2>
+<div class="container"> 
+
+  {% if success %}
+    <div class="alert alert-success" role="alert">
+      {{ success }}
+    </div> 
+  {% endif %}
+
+
+
   <table class="table table-striped" id="puppies">
     <h2>Puppies</h2>
     <thead>
@@ -28,9 +36,3 @@
 </div>
 
 {% endblock %}
-
-<!-- <ol>
-{% for person in people %}
-  <li>{{ person.name }}</li>
-{% endfor %} 
-</ol> -->
